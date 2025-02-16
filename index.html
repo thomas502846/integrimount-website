@@ -1,0 +1,276 @@
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>誠山軟體LLM工作室 × IntegriMount LLM Studio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @keyframes gradientFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .hero-bg {
+      background: linear-gradient(-45deg, #1a365f, #2a5298, #3b82f6);
+      background-size: 400% 400%;
+      animation: gradientFlow 15s ease infinite;
+    }
+    .service-card:hover .card-icon {
+      transform: rotate(8deg) scale(1.1);
+    }
+    .timeline-dot::before {
+      content: '';
+      @apply absolute w-3 h-3 bg-blue-500 rounded-full left-[-28px];
+    }
+  </style>
+</head>
+<body class="font-sans">
+  <!-- 導航欄 -->
+  <nav class="fixed w-full bg-white/90 backdrop-blur z-50 shadow-sm">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <img src="logo_tippleTriangle_woBG_SVG.svg" 
+             alt="IntegriMount Logo" 
+             class="w-12 h-12 object-contain"
+             style="max-width: 100%; height: auto; display: block;">
+        <span class="text-xl font-bold">IntegriMount</span>
+      </div>
+      <div class="hidden md:flex space-x-8">
+        <a href="#hero" class="nav-link hover:text-blue-600">首頁</a>
+        <a href="#about" class="nav-link hover:text-blue-600">關於我們</a>
+        <a href="#services" class="nav-link hover:text-blue-600">服務項目</a>
+        <a href="#cases" class="nav-link hover:text-blue-600">成功案例</a>
+        <a href="#blog" class="nav-link hover:text-blue-600">最新消息</a>
+        <a href="#contact" class="nav-link hover:text-blue-600">聯絡我們</a>
+      </div>
+      <button class="md:hidden">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- 主形象區 -->
+  <section id="hero" class="hero-bg text-white min-h-screen flex items-center pt-20">
+    <div class="container mx-auto px-6 py-20 text-center">
+      <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+        <span class="block">誠山軟體LLM工作室</span>
+        <span class="text-3xl md:text-5xl font-light">× IntegriMount LLM Studio</span>
+      </h1>
+      <p class="text-xl md:text-2xl mb-8 opacity-90">用 AI 創造 x3 效率，與您一起領先市場</p>
+      <p class="max-w-2xl mx-auto text-lg mb-12 opacity-90 leading-relaxed">
+        我們專注於 LLM 應用落地，從流程自動化到專業大模型微調佈署，協助您在數位轉型中穩健成長。
+      </p>
+      <div class="flex justify-center space-x-4">
+        <a href="#contact" class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition">
+          聯繫我們
+        </a>
+        <a href="#services" class="border-2 border-white px-8 py-3 rounded-full hover:bg-white hover:text-blue-600 transition">
+          了解更多服務
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 關於我們 -->
+  <section id="about" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold mb-12 text-center">關於 IntegriMount</h2>
+        <div class="flex flex-col md:flex-row items-center gap-12 mb-12">
+          <div class="md:w-1/3 flex justify-center">
+            <img src="logo_integrimountllmstudio_woBG_SVG.svg" 
+                 alt="IntegriMount Logo" 
+                 class="w-72 h-72 object-contain transform hover:scale-105 transition-transform duration-300"
+                 style="filter: none;">
+          </div>
+          <div class="md:w-2/3">
+            <div class="space-y-8 relative border-l-2 border-gray-200 pl-8 timeline-dot">
+              <div>
+                <h3 class="text-xl font-semibold mb-4">專業與信任的基石</h3>
+                <p class="text-gray-600 leading-relaxed">
+                  「誠山」蘊含對專業與信任的重視，英文「IntegriMount」結合 Integrity（誠信）與 Mountain（可靠），代表我們以踏實技術協助客戶穩步邁向 AI 新時代。
+                </p>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-4">獲獎經歷與認證</h3>
+                <ul class="list-disc pl-6 space-y-2 text-gray-600">
+                  <li>總統盃黑客松「卓越團隊」得主</li>
+                  <li>數位發展部 T-Cross 項目肯定</li>
+                  <li>PMP及敏捷式專案管理</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 服務項目 -->
+  <section id="services" class="py-20">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-12 text-center">專業服務項目</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- service cards start -->
+        <div class="service-card bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition">
+          <div class="card-icon w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6 transition">
+            <i class="fas fa-robot text-3xl text-blue-600"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-4">AI 導入規劃</h3>
+          <p class="text-gray-600">系統化評估企業需求，制定最佳技術整合方案</p>
+        </div>
+
+        <div class="service-card bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition">
+          <div class="card-icon w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mb-6 transition">
+            <i class="fas fa-cogs text-3xl text-green-600"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-4">流程自動化 (RPA)</h3>
+          <p class="text-gray-600">整合多系統自動化流程，減少人為錯誤與重複工作</p>
+        </div>
+
+        <div class="service-card bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition">
+          <div class="card-icon w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mb-6 transition">
+            <i class="fas fa-microchip text-3xl text-purple-600"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-4">LLM 微調佈署</h3>
+          <p class="text-gray-600">安全可靠的本地化模型客製與 Docker 容器佈署</p>
+        </div>
+
+        <div class="service-card bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition">
+          <div class="card-icon w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center mb-6 transition">
+            <i class="fas fa-chart-line text-3xl text-orange-600"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-4">BI 資料戰情室</h3>
+          <p class="text-gray-600">多源數據整合即時分析，打造決策儀表板</p>
+        </div>
+
+        <div class="service-card bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition">
+          <div class="card-icon w-16 h-16 bg-yellow-100 rounded-xl flex items-center justify-center mb-6 transition">
+            <i class="fas fa-chalkboard-user text-3xl text-yellow-600"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-4">企業 AI 內訓</h3>
+          <p class="text-gray-600">LLM/RPA工作坊與敏捷開發實戰教學</p>
+        </div>
+        <!-- service cards end -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 成功案例 -->
+  <section id="cases" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-12 text-center">成功案例</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Case 1 -->
+        <div class="case-card bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-lg transition">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+              <i class="fas fa-trophy text-blue-600"></i>
+            </div>
+            <h3 class="text-xl font-semibold">總統盃黑客松卓越團隊</h3>
+          </div>
+          <p class="text-gray-600 mb-4">開發跨專業協作Connect 10，提供跨專業協同作業平台</p>
+          <div class="bg-blue-50 px-4 py-2 rounded-lg">
+            <span class="text-sm font-medium text-blue-700">🏆 2024總統府頒獎肯定</span>
+          </div>
+        </div>
+
+        <!-- Case 2 -->
+        <div class="case-card bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-lg transition">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+              <i class="fas fa-hand-holding-heart text-green-600"></i>
+            </div>
+            <h3 class="text-xl font-semibold">T-Cross 長照機構用數位工具</h3>
+          </div>
+          <p class="text-gray-600 mb-4">為長照機構提供每日營運管理所需數位工具，服務全流程中所需各種數位需求</p>
+          <div class="space-y-2">
+            <span class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">📈 提升30%管理效率</span>
+            <span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">✅ 全流程串接</span>
+          </div>
+        </div>
+
+        <!-- Case 3 -->
+        <div class="case-card bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-lg transition">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+              <i class="fas fa-hospital text-purple-600"></i>
+            </div>
+            <h3 class="text-xl font-semibold">醫院智慧管理面板</h3>
+          </div>
+          <p class="text-gray-600 mb-4">整合多來源服務數據即時儀表板，結合自動化報表生成系統</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">⏱ 節省65%報表時間</span>
+            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">📊 即時數據監控</span>
+          </div>
+        </div>
+
+        <!-- Case 4 -->
+        <div class="case-card bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-lg transition">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mr-4">
+              <i class="fas fa-robot text-orange-600"></i>
+            </div>
+            <h3 class="text-xl font-semibold">企業級LLM佈署</h3>
+          </div>
+          <p class="text-gray-600 mb-4">大語言模型深度微調學習企業內容，Docker化本地部署解決方案</p>
+          <div class="space-y-2">
+            <span class="inline-block bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">🔒 資料零外流</span>
+            <span class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">🚀 回應準確度提升25%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 最新消息 -->
+  <section id="blog" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6 max-w-2xl">
+      <h2 class="text-3xl font-bold mb-12 text-center">最新消息</h2>
+      <!-- Latest news content here -->
+    </div>
+  </section>
+
+  <!-- 聯絡表單 -->
+  <section id="contact" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6 max-w-2xl">
+      <h2 class="text-3xl font-bold mb-12 text-center">聯絡我們</h2>
+      <div class="text-center space-y-4">
+        <p class="text-xl font-semibold">誠山軟體LLM工作室 IntegriMount LLM Studio</p>
+        <p class="text-gray-600">
+          <i class="fas fa-envelope mr-2"></i>
+          <a href="mailto:integrimount@gmail.com" class="text-blue-600 hover:underline">integrimount@gmail.com</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 頁腳 --> 
+  <footer class="bg-gray-50 border-t border-gray-200">
+    <div class="container mx-auto px-6 py-6">
+      <div class="text-center text-gray-600 text-[0.67rem] space-y-1" style="color: rgba(75, 85, 99, 0.8);">
+        <div>Copyright 2023 - Created by IntegriMount LLM Studio</div>
+        <div>版權所有 2023- 由IntegriMount LLM Studio創建</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // 平滑滾動和導航高亮
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // 響應式導航切換
+    document.querySelector('button').addEventListener('click', () => {
+      document.querySelector('.md\\:flex').classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
