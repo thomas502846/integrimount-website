@@ -27,29 +27,50 @@
 </head>
 <body class="font-sans">
   <!-- 導航欄 -->
-  <nav class="fixed w-full bg-white/90 backdrop-blur z-50 shadow-sm">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <div class="flex items-center space-x-2">
-        <img src="public/images/logo/logo-triangle.svg" 
-             alt="IntegriMount Logo" 
-             class="w-12 h-12 object-contain"
-             style="max-width: 100%; height: auto; display: block;">
-        <div class="flex flex-col md:flex-row md:items-center md:space-x-1">
-          <span class="text-xl font-bold">IntegriMount</span>
-          <span class="text-sm md:text-xl">LLM工作室</span>
+  <nav class="fixed w-full bg-white/90 backdrop-blur z-[100] shadow-sm">
+    <div class="container mx-auto px-6 py-4">
+      <!-- Logo and name container -->
+      <div class="flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+          <img src="public/images/logo/logo-triangle.svg" 
+               alt="IntegriMount Logo" 
+               class="w-12 h-12 object-contain"
+               style="max-width: 100%; height: auto; display: block;">
+          <div class="flex flex-col lg:flex-row lg:items-center lg:space-x-1">
+            <span class="text-xl font-bold">IntegriMount</span>
+            <span class="text-sm lg:text-xl">LLM工作室</span>
+          </div>
+        </div>
+        
+        <!-- Desktop menu (large screens only) -->
+        <div class="hidden lg:flex space-x-8">
+          <a href="#hero" class="nav-link hover:text-blue-600">首頁</a>
+          <a href="#about" class="nav-link hover:text-blue-600">關於我們</a>
+          <a href="#services" class="nav-link hover:text-blue-600">服務項目</a>
+          <a href="#cases" class="nav-link hover:text-blue-600">成功案例</a>
+          <a href="#blog" class="nav-link hover:text-blue-600">最新消息</a>
+          <a href="#contact" class="nav-link hover:text-blue-600">聯絡我們</a>
+        </div>
+
+        <!-- Menu button (mobile and tablet) -->
+        <button id="mobile-menu-button" class="lg:hidden text-gray-600 hover:text-gray-900 focus:outline-none">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+
+      <!-- Dropdown menu (mobile and tablet) -->
+      <div id="mobile-menu" class="hidden lg:hidden mt-4 rounded-lg overflow-hidden">
+        <div class="bg-white/95 shadow-lg rounded-lg">
+          <div class="py-2">
+            <a href="#hero" class="block px-4 py-3 hover:bg-blue-50 hover:text-blue-600">首頁</a>
+            <a href="#about" class="block px-4 py-3 hover:bg-blue-50 hover:text-blue-600">關於我們</a>
+            <a href="#services" class="block px-4 py-3 hover:bg-blue-50 hover:text-blue-600">服務項目</a>
+            <a href="#cases" class="block px-4 py-3 hover:bg-blue-50 hover:text-blue-600">成功案例</a>
+            <a href="#blog" class="block px-4 py-3 hover:bg-blue-50 hover:text-blue-600">最新消息</a>
+            <a href="#contact" class="block px-4 py-3 hover:bg-blue-50 hover:text-blue-600">聯絡我們</a>
+          </div>
         </div>
       </div>
-      <div class="hidden md:flex space-x-8">
-        <a href="#hero" class="nav-link hover:text-blue-600">首頁</a>
-        <a href="#about" class="nav-link hover:text-blue-600">關於我們</a>
-        <a href="#services" class="nav-link hover:text-blue-600">服務項目</a>
-        <a href="#cases" class="nav-link hover:text-blue-600">成功案例</a>
-        <a href="#blog" class="nav-link hover:text-blue-600">最新消息</a>
-        <a href="#contact" class="nav-link hover:text-blue-600">聯絡我們</a>
-      </div>
-      <button class="md:hidden">
-        <i class="fas fa-bars text-2xl"></i>
-      </button>
     </div>
   </nav>
 
@@ -319,12 +340,14 @@
         document.querySelector(this.getAttribute('href')).scrollIntoView({
           behavior: 'smooth'
         });
+        // Close mobile menu when clicking a link
+        document.getElementById('mobile-menu').classList.add('hidden');
       });
     });
 
     // 響應式導航切換
-    document.querySelector('button').addEventListener('click', () => {
-      document.querySelector('.md\\:flex').classList.toggle('hidden');
+    document.getElementById('mobile-menu-button').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
     });
   </script>
 </body>
