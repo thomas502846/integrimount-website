@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>部落格 - 誠山軟體LLM工作室</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-sans bg-gray-50">
+  <!-- 導航欄 -->
+  <nav class="fixed w-full bg-white/90 backdrop-blur z-50 shadow-sm">
+    <div class="container mx-auto px-6 py-4">
+      <a href="index.html" class="flex items-center space-x-2">
+        <img src="public/images/logo/logo-triangle.svg" 
+             alt="IntegriMount Logo" 
+             class="w-12 h-12">
+        <span class="text-xl font-bold">IntegriMount</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- 部落格內容 -->
+  <div class="container mx-auto px-6 py-24 max-w-4xl">
+    <!-- 新文章 -->
+    <article id="agent-leaderboard" class="bg-white rounded-xl shadow-md p-8 mb-12">
+      <header class="mb-8">
+        <div class="flex items-center justify-between mb-4">
+          <div class="space-x-2">
+            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">AI代理</span>
+            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">工具評估</span>
+          </div>
+          <time class="text-gray-500">2024-02-12</time>
+        </div>
+        <h1 class="text-3xl font-bold mb-4">AI代理工具評估排行榜：Gemini-2.0-flash奪冠</h1>
+      </header>
+
+      <div class="prose max-w-none">
+        <p class="text-gray-600 leading-relaxed mb-6">
+          Galileo Labs最新發布的AI代理工具評估排行榜顯示，Google的Gemini-2.0-flash以0.938的優異成績領先群雄。這項評估涵蓋了17個主流大型語言模型，測試其在實際業務場景中的工具使用能力。
+        </p>
+
+        <div class="my-8">
+          <img src="public/images/blog/agent-leaderboard.png" 
+               alt="AI Agent Leaderboard" 
+               class="w-full rounded-lg shadow-md">
+          <p class="text-sm text-gray-500 mt-2 text-center">
+            圖：2024年2月AI代理工具評估排行榜（來源：Galileo Labs）
+          </p>
+        </div>
+
+        <p class="text-gray-600 leading-relaxed mb-6">
+          排行榜前五名分別為Gemini-2.0-flash（0.938）、GPT-4o（0.900）、Gemini-1.5-flash（0.895）、Gemini-1.5-pro（0.885）和o1（0.876）。評估框架包含了單輪對話、工具選擇、並行執行、錯誤處理等多個維度，全面反映了各模型在實際應用場景中的表現。
+        </p>
+
+        <p class="text-gray-600 leading-relaxed mb-6">
+          這項研究對AI開發者具有重要參考價值，特別是在選擇適合特定業務場景的模型時。研究團隊也開源了評估數據集，讓開發者能夠進行自主評估。
+        </p>
+      </div>
+    </article>
+
+    <!-- 原有的LLM幻覺文章 -->
+    <article id="llm-hallucination" class="bg-white rounded-xl shadow-md p-8 mb-12">
+      <header class="mb-8">
+        <div class="flex items-center justify-between mb-4">
+          <div class="space-x-2">
+            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">LLM</span>
+            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">AI研究</span>
+          </div>
+          <time class="text-gray-500">2024-02-11</time>
+        </div>
+        <h1 class="text-3xl font-bold mb-4">最新LLM幻覺排行榜出爐！Google Gemini-2.0領先群雄</h1>
+      </header>
+
+      <div class="prose max-w-none">
+        <p class="text-gray-600 leading-relaxed mb-6">
+          Vectara最新發布的大型語言模型(LLM)幻覺測試排行榜顯示，Google的Gemini-2.0系列模型在防止產生幻覺方面表現優異。測試採用Hughes幻覺評估模型(HHEM-2.1)，對超過80個主流LLM進行評估，重點關注模型在摘要任務中產生幻覺的頻率。
+        </p>
+
+        <p class="text-gray-600 leading-relaxed mb-6">
+          排行榜前五名分別為：Google Gemini-2.0-Flash-001（幻覺率0.7%）、Google Gemini-2.0-Pro-Exp（0.8%）、OpenAI-o3-mini-high-reasoning（0.8%）、Google Gemini-2.0-Flash-Lite-Preview（1.2%）和Zhipu AI GLM-4-9B-Chat（1.3%）。這些結果顯示了大型科技公司在改善LLM可靠性方面的重大進展。
+        </p>
+
+        <div class="my-8">
+          <img src="public/images/blog/hallucination-rates.png" 
+               alt="LLM Hallucination Leaderboard" 
+               class="w-full rounded-lg shadow-md">
+          <p class="text-sm text-gray-500 mt-2 text-center">
+            圖：2024年2月LLM幻覺測試排行榜（來源：Vectara）
+          </p>
+        </div>
+
+        <p class="text-gray-600 leading-relaxed mb-6">
+          這項研究對AI開發者具有重要意義，因為它提供了一個客觀的標準來評估LLM的可靠性。特別是在RAG（檢索增強生成）系統中，模型的幻覺率直接影響系統的可用性和可信度。研究團隊也開源了評估模型HHEM-2.1-Open，讓開發者能夠自行評估其模型的表現。
+        </p>
+
+        <div class="bg-blue-50 p-6 rounded-lg mb-6">
+          <h3 class="text-lg font-semibold mb-2">重要發現</h3>
+          <ul class="list-disc list-inside space-y-2 text-gray-700">
+            <li>Google Gemini-2.0系列模型展現最低幻覺率</li>
+            <li>大多數主流模型的幻覺率都在5%以下</li>
+            <li>模型大小與幻覺率並非直接相關</li>
+            <li>開源模型在這方面仍有改進空間</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- 返回首頁 -->
+    <div class="text-center">
+      <a href="index.html#blog" class="inline-flex items-center text-blue-600 hover:underline">
+        <i class="fas fa-arrow-left mr-2"></i> 返回最新消息
+      </a>
+    </div>
+  </div>
+
+  <!-- 頁腳 -->
+  <footer class="bg-gray-50 border-t border-gray-200">
+    <div class="container mx-auto px-6 py-6">
+      <div class="text-center text-gray-600 text-[0.67rem] space-y-1">
+        <div>Copyright 2023 - Created by IntegriMount LLM Studio</div>
+        <div>版權所有 2023- 由IntegriMount LLM Studio創建</div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html> 
